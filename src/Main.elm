@@ -151,7 +151,6 @@ view : Model -> Html Msg
 view model =
   div []
     ([ button [ onClick Randomize ] [ text "Randomize" ] 
-    , button [ onClick Clear ] [ text "Clear" ]
     , Svg.svg
         [ width "500"
         , height "300"]
