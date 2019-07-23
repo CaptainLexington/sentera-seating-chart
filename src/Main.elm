@@ -116,22 +116,22 @@ desk index name coords =
      y0 =  (10 + (row) * 50)
  in
     Svg.svg
-                      [ x (String.fromInt (Tuple.first coords))
-                      , y (String.fromInt (Tuple.second coords))
-                      ]
-                      [
-                      Svg.text_ 
-                      [ x "5"
-                      , y "25"]
-                      [ Svg.text name ]
-                      , Svg.rect
-                        [ width "90"
-                        , height "50"
-                        , fill "transparent"
-                        , stroke "blue"
-                        ]
-                        []
-                       ]
+     [ x (String.fromInt (Tuple.first coords))
+     , y (String.fromInt (Tuple.second coords))
+     ]
+     [
+     Svg.text_ 
+     [ x "5"
+     , y "25"]
+     [ Svg.text name ]
+     , Svg.rect
+       [ width "90"
+       , height "50"
+       , fill "transparent"
+       , stroke "blue"
+       ]
+       []
+     ]
 
 
 
