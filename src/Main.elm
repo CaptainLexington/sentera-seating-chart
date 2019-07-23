@@ -109,12 +109,6 @@ update msg model =
 
 desk : Int -> String -> (Int, Int) -> Svg Msg
 desk index name coords = 
-  let 
-     x0 =  (10 + (100 * index))
-     row = (floor (((toFloat x0) / 500)))
-     x1 = x0 - (row * 500)
-     y0 =  (10 + (row) * 50)
- in
     Svg.svg
      [ x (String.fromInt (Tuple.first coords))
      , y (String.fromInt (Tuple.second coords))
@@ -145,7 +139,11 @@ room seats = Svg.g
           , stroke "black"
           ]
           [] 
-          ] ++ (List.map3 desk (List.range 1 11) seats seatCoords))
+          ] ++ (List.map3
+                       desk
+                       (List.range 1 11)
+                       seats
+                       seatCoords))
 
 view : Model -> Html Msg
 view model =
